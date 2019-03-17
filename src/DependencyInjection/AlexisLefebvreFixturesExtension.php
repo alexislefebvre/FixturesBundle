@@ -31,12 +31,7 @@ class AlexisLefebvreFixturesExtension extends Extension
         $config = $this->processConfiguration(new Configuration(), $configs);
 
         $loader = new XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
-        $loader->load('commands.xml');
-        $loader->load('functional_test.xml');
         $loader->load('database_tools.xml');
-        if (interface_exists('Symfony\Component\Validator\Validator\ValidatorInterface')) {
-            $loader->load('validator.xml');
-        }
 
         foreach ($config as $key => $value) {
             // If the node is an array,
@@ -54,8 +49,5 @@ class AlexisLefebvreFixturesExtension extends Extension
                 $container->setParameter($this->getAlias().'.'.$key, $value);
             }
         }
-
-        $definition = $container->getDefinition('alexis_lefebvre_fixtures.query.count_client');
-        $definition->setShared(false);
     }
 }

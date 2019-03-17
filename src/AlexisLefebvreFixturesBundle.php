@@ -22,7 +22,6 @@ class AlexisLefebvreFixturesBundle extends Bundle
 {
     public function build(ContainerBuilder $container): void
     {
-        $container->addCompilerPass(new SetTestClientPass());
         $container->addCompilerPass(new OptionalValidatorPass());
     }
 }
