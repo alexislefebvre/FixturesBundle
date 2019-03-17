@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 /*
- * This file is part of the Liip/FunctionalTestBundle
+ * This file is part of the Liip/TestFixturesBundle
  *
  * (c) Lukas Kahwe Smith <smith@pooteeweet.org>
  *
@@ -11,18 +11,17 @@ declare(strict_types=1);
  * with this source code in the file LICENSE.
  */
 
-namespace Liip\FunctionalTestBundle;
+namespace Liip\TestFixturesBundle;
 
-use Liip\FunctionalTestBundle\DependencyInjection\Compiler\OptionalValidatorPass;
-use Liip\FunctionalTestBundle\DependencyInjection\Compiler\SetTestClientPass;
+use Liip\TestFixturesBundle\DependencyInjection\Compiler\OptionalValidatorPass;
+use Liip\TestFixturesBundle\DependencyInjection\Compiler\SetTestClientPass;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class LiipFunctionalTestBundle extends Bundle
+class LiipTestFixturesBundle extends Bundle
 {
     public function build(ContainerBuilder $container): void
     {
-        $container->addCompilerPass(new SetTestClientPass());
         $container->addCompilerPass(new OptionalValidatorPass());
     }
 }

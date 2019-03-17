@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 /*
- * This file is part of the Liip/FunctionalTestBundle
+ * This file is part of the Liip/TestFixturesBundle
  *
  * (c) Lukas Kahwe Smith <smith@pooteeweet.org>
  *
@@ -11,7 +11,7 @@ declare(strict_types=1);
  * with this source code in the file LICENSE.
  */
 
-namespace Liip\FunctionalTestBundle\DependencyInjection\Compiler;
+namespace Liip\TestFixturesBundle\DependencyInjection\Compiler;
 
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -21,7 +21,7 @@ class OptionalValidatorPass implements CompilerPassInterface
     public function process(ContainerBuilder $container): void
     {
         if (!$container->hasDefinition('validator')) {
-            $container->removeDefinition('liip_functional_test.validator');
+            $container->removeDefinition('liip_test_fixtures.validator');
         }
     }
 }
