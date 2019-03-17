@@ -94,10 +94,6 @@ class WebTestCaseConfigTest extends WebTestCase
      */
     public function testCacheCanBeDisabled(): void
     {
-        // MD5 hash corresponding to these fixtures files.
-        $md5 = '0ded9d8daaeaeca1056b18b9d0d433b2';
-        $databaseFilePath = $this->getContainer()->getParameter('kernel.cache_dir').'/test_sqlite_'.$md5.'.db';
-
         $fixtures = [
             'AlexisLefebvre\FixturesBundle\Tests\App\DataFixtures\ORM\LoadDependentUserData',
         ];
@@ -131,7 +127,7 @@ class WebTestCaseConfigTest extends WebTestCase
     public function testBackupIsRefreshed(): void
     {
         // MD5 hash corresponding to these fixtures files.
-        $md5 = '0ded9d8daaeaeca1056b18b9d0d433b2';
+        $md5 = '91b5749d736e68d28968e111d8a1ace3';
 
         $fixtures = [
             'AlexisLefebvre\FixturesBundle\Tests\App\DataFixtures\ORM\LoadDependentUserData',
