@@ -1,5 +1,5 @@
 {
-    "name": "liip/functional-test-bundle",
+    "name": "alexislefebvre/test-bundle",
     "description": "This bundles provides additional functional test-cases for Symfony2 applications",
     "keywords": ["symfony2"],
     "type": "symfony-bundle",
