@@ -1,5 +1,5 @@
 {
-    "name": "liip/functional-test-bundle",
+    "name": "alexislefebvre/fixtures-bundle",
     "description": "This bundles provides additional functional test-cases for Symfony applications",
     "keywords": ["symfony", "testing", "fixtures"],
     "type": "symfony-bundle",
@@ -43,12 +43,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Liip\\FunctionalTestBundle\\": "src/"
+            "AlexisLefebvre\\FixturesBundle\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Liip\\FunctionalTestBundle\\Tests\\": "tests/"
+            "AlexisLefebvre\\FixturesBundle\\Tests\\": "tests/"
         }
     },
     "config": {
