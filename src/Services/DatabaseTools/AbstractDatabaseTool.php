@@ -11,13 +11,13 @@
 
 namespace AlexisLefebvre\FixturesBundle\Services\DatabaseTools;
 
+use AlexisLefebvre\FixturesBundle\Services\DatabaseBackup\DatabaseBackupInterface;
+use AlexisLefebvre\FixturesBundle\Services\FixturesLoaderFactory;
 use Doctrine\Common\DataFixtures\Executor\AbstractExecutor;
 use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\DBAL\Connection;
-use AlexisLefebvre\FixturesBundle\Services\DatabaseBackup\DatabaseBackupInterface;
-use AlexisLefebvre\FixturesBundle\Services\FixturesLoaderFactory;
-use AlexisLefebvre\FixturesBundle\Test\WebTestCase;
 use Symfony\Bridge\Doctrine\ManagerRegistry;
+use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**

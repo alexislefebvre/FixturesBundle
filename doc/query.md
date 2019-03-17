@@ -66,7 +66,7 @@ Caveats
    `@IgnoreAnnotation` annotation:
 
    ```php
-   use AlexisLefebvre\FixturesBundle\Test\WebTestCase;
+   use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
    /**
     * @IgnoreAnnotation("dataProvider")

@@ -13,10 +13,11 @@ declare(strict_types=1);
 
 namespace AlexisLefebvre\FixturesBundle\Tests\Test;
 
+use AlexisLefebvre\FixturesBundle\Test\FixturesTrait;
+use AlexisLefebvre\FixturesBundle\Tests\AppConfigPhpcr\AppConfigPhpcrKernel;
 use Doctrine\Bundle\PHPCRBundle\DoctrinePHPCRBundle;
 use Doctrine\ORM\Tools\SchemaTool;
-use AlexisLefebvre\FixturesBundle\Test\WebTestCase;
-use AlexisLefebvre\FixturesBundle\Tests\AppConfigPhpcr\AppConfigPhpcrKernel;
+use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 /**
  * Test PHPCR.
@@ -30,6 +31,8 @@ use AlexisLefebvre\FixturesBundle\Tests\AppConfigPhpcr\AppConfigPhpcrKernel;
  */
 class WebTestCaseConfigPhpcrTest extends WebTestCase
 {
+    use FixturesTrait;
+
     protected static function getKernelClass(): string
     {
         return AppConfigPhpcrKernel::class;

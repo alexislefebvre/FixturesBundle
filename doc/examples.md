@@ -25,7 +25,7 @@ declare(strict_types=1);
 namespace Liip\FooBundle\Tests;
 
 use AlexisLefebvre\FixturesBundle\Controller\DefaultController;
-use AlexisLefebvre\FixturesBundle\Test\WebTestCase;
+use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 class ExampleUnitTest extends WebTestCase
 {
@@ -65,7 +65,7 @@ declare(strict_types=1);
 
 namespace Liip\FooBundle\Tests;
 
-use AlexisLefebvre\FixturesBundle\Test\WebTestCase;
+use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 class ExampleFunctionalTest extends WebTestCase
 {

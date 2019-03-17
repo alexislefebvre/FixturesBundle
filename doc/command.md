@@ -13,7 +13,7 @@ and ```debug```. The default value is ```normal```.
 
 You can also configure this on a per-test basis:
 ```php
-use AlexisLefebvre\FixturesBundle\Test\WebTestCase;
+use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 class MyTestCase extends WebTestCase {
 
@@ -35,7 +35,7 @@ The default value is true.
 
 You can also configure this on a per-test basis:
 ```php
-use AlexisLefebvre\FixturesBundle\Test\WebTestCase;
+use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 class MyTestCase extends WebTestCase {
 

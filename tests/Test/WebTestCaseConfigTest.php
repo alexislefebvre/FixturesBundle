@@ -13,11 +13,11 @@ declare(strict_types=1);
 
 namespace AlexisLefebvre\FixturesBundle\Tests\Test;
 
-use Doctrine\Common\Annotations\Annotation\IgnoreAnnotation;
 use AlexisLefebvre\FixturesBundle\Annotations\DisableDatabaseCache;
-use AlexisLefebvre\FixturesBundle\Annotations\QueryCount;
-use AlexisLefebvre\FixturesBundle\Test\WebTestCase;
+use AlexisLefebvre\FixturesBundle\Test\FixturesTrait;
 use AlexisLefebvre\FixturesBundle\Tests\AppConfig\AppConfigKernel;
+use Doctrine\Common\Annotations\Annotation\IgnoreAnnotation;
+use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 /**
  * Tests that configuration has been loaded and users can be logged in.
@@ -36,6 +36,8 @@ use AlexisLefebvre\FixturesBundle\Tests\AppConfig\AppConfigKernel;
  */
 class WebTestCaseConfigTest extends WebTestCase
 {
+    use FixturesTrait;
+
     /** @var \Symfony\Bundle\FrameworkBundle\Client client */
     private $client = null;
 

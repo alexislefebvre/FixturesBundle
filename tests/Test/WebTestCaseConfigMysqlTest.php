@@ -13,10 +13,11 @@ declare(strict_types=1);
 
 namespace AlexisLefebvre\FixturesBundle\Tests\Test;
 
+use AlexisLefebvre\FixturesBundle\Test\FixturesTrait;
+use AlexisLefebvre\FixturesBundle\Tests\AppConfigMysql\AppConfigMysqlKernel;
 use Doctrine\Common\Annotations\Annotation\IgnoreAnnotation;
 use Doctrine\Common\DataFixtures\Purger\ORMPurger;
-use AlexisLefebvre\FixturesBundle\Test\WebTestCase;
-use AlexisLefebvre\FixturesBundle\Tests\AppConfigMysql\AppConfigMysqlKernel;
+use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 /**
  * Test MySQL database.
@@ -38,6 +39,8 @@ use AlexisLefebvre\FixturesBundle\Tests\AppConfigMysql\AppConfigMysqlKernel;
  */
 class WebTestCaseConfigMysqlTest extends WebTestCase
 {
+    use FixturesTrait;
+
     protected static function getKernelClass(): string
     {
         return AppConfigMysqlKernel::class;

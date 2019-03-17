@@ -13,7 +13,7 @@ encountered by the Client object.
 If you are expecting validation errors, test them with `assertValidationErrors`.
 
 ```php
-use AlexisLefebvre\FixturesBundle\Test\WebTestCase;
+use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 class MyControllerTest extends WebTestCase
 {

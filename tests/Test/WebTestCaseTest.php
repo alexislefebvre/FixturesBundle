@@ -13,11 +13,11 @@ declare(strict_types=1);
 
 namespace AlexisLefebvre\FixturesBundle\Tests\Test;
 
+use AlexisLefebvre\FixturesBundle\Test\FixturesTrait;
+use AlexisLefebvre\FixturesBundle\Tests\App\AppKernel;
 use Doctrine\Common\Annotations\Annotation\IgnoreAnnotation;
 use Doctrine\Common\DataFixtures\Purger\ORMPurger;
-use AlexisLefebvre\FixturesBundle\Test\WebTestCase;
-use AlexisLefebvre\FixturesBundle\Tests\App\AppKernel;
-use PHPUnit\Framework\AssertionFailedError;
+use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 /**
  * @IgnoreAnnotation("depends")
@@ -25,6 +25,8 @@ use PHPUnit\Framework\AssertionFailedError;
  */
 class WebTestCaseTest extends WebTestCase
 {
+    use FixturesTrait;
+
     public function setUp(): void
     {
         static::$class = AppKernel::class;

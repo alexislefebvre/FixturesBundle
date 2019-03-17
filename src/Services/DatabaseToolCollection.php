@@ -11,11 +11,11 @@
 
 namespace AlexisLefebvre\FixturesBundle\Services;
 
-use Doctrine\Common\Annotations\AnnotationReader;
 use AlexisLefebvre\FixturesBundle\Annotations\DisableDatabaseCache;
 use AlexisLefebvre\FixturesBundle\Services\DatabaseTools\AbstractDatabaseTool;
-use AlexisLefebvre\FixturesBundle\Test\WebTestCase;
+use Doctrine\Common\Annotations\AnnotationReader;
 use Symfony\Bridge\Doctrine\ManagerRegistry;
+use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
