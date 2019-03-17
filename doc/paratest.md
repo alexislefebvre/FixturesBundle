@@ -20,7 +20,7 @@ In order to do this, simply add the following to your config_test.yml
 
 ```yaml
 parameters:
-    doctrine.dbal.connection_factory.class: Liip\FunctionalTestBundle\Factory\ConnectionFactory
+    doctrine.dbal.connection_factory.class: AlexisLefebvre\FixturesBundle\Factory\ConnectionFactory
 ```
 
 then rename your default test dbname with this: 

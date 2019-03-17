@@ -9,14 +9,14 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Liip\FunctionalTestBundle\Services\DatabaseTools;
+namespace AlexisLefebvre\FixturesBundle\Services\DatabaseTools;
 
 use Doctrine\Common\DataFixtures\Executor\AbstractExecutor;
 use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\DBAL\Connection;
-use Liip\FunctionalTestBundle\Services\DatabaseBackup\DatabaseBackupInterface;
-use Liip\FunctionalTestBundle\Services\FixturesLoaderFactory;
-use Liip\FunctionalTestBundle\Test\WebTestCase;
+use AlexisLefebvre\FixturesBundle\Services\DatabaseBackup\DatabaseBackupInterface;
+use AlexisLefebvre\FixturesBundle\Services\FixturesLoaderFactory;
+use AlexisLefebvre\FixturesBundle\Test\WebTestCase;
 use Symfony\Bridge\Doctrine\ManagerRegistry;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 

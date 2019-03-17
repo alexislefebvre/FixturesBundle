@@ -32,12 +32,12 @@ regardless of the amount set in the configuration. For those cases you can set
 an annotation on the test method that will override the default maximum for any
 requests made in that test.
 
-To do that, include the Liip\FunctionalTestBundle\Annotations\QueryCount
+To do that, include the AlexisLefebvre\FixturesBundle\Annotations\QueryCount
 namespace and add the `@QueryCount(100)` annotation, where 100 is the maximum
 amount of queries allowed for each request, like this:
 
 ```php
-use Liip\FunctionalTestBundle\Annotations\QueryCount;
+use AlexisLefebvre\FixturesBundle\Annotations\QueryCount;
 
 class DemoTest extends WebTestCase
 {
@@ -66,7 +66,7 @@ Caveats
    `@IgnoreAnnotation` annotation:
 
    ```php
-   use Liip\FunctionalTestBundle\Test\WebTestCase;
+   use AlexisLefebvre\FixturesBundle\Test\WebTestCase;
 
    /**
     * @IgnoreAnnotation("dataProvider")

@@ -11,9 +11,9 @@ declare(strict_types=1);
  * with this source code in the file LICENSE.
  */
 
-namespace Liip\FunctionalTestBundle\Tests\DependencyInjection\Compiler;
+namespace AlexisLefebvre\FixturesBundle\Tests\DependencyInjection\Compiler;
 
-use Liip\FunctionalTestBundle\DependencyInjection\Compiler\SetTestClientPass;
+use AlexisLefebvre\FixturesBundle\DependencyInjection\Compiler\SetTestClientPass;
 use PHPUnit\Framework\TestCase;
 
 /**

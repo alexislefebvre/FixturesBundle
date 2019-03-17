@@ -11,10 +11,10 @@ declare(strict_types=1);
  * with this source code in the file LICENSE.
  */
 
-namespace Liip\FunctionalTestBundle\Tests\Test;
+namespace AlexisLefebvre\FixturesBundle\Tests\Test;
 
-use Liip\FunctionalTestBundle\Test\WebTestCase;
-use Liip\FunctionalTestBundle\Tests\AppConfigLeanFramework\AppConfigLeanFrameworkKernel;
+use AlexisLefebvre\FixturesBundle\Test\WebTestCase;
+use AlexisLefebvre\FixturesBundle\Tests\AppConfigLeanFramework\AppConfigLeanFrameworkKernel;
 
 /**
  * Test Lean Framework - with validator component disabled.
@@ -54,7 +54,7 @@ class WebTestCaseConfigLeanFrameworkTest extends WebTestCase
             $this->assertValidationErrors([], $client->getContainer());
         } catch (\Exception $e) {
             $this->assertSame(
-                'Method Liip\FunctionalTestBundle\Utils\HttpAssertions::assertValidationErrors() can not be used as the validation component of the Symfony framework is disabled.',
+                'Method AlexisLefebvre\FixturesBundle\Utils\HttpAssertions::assertValidationErrors() can not be used as the validation component of the Symfony framework is disabled.',
                 $e->getMessage()
             );
 

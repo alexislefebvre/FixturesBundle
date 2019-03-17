@@ -9,9 +9,9 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Liip\FunctionalTestBundle\Services\DatabaseBackup;
+namespace AlexisLefebvre\FixturesBundle\Services\DatabaseBackup;
 
-use Liip\FunctionalTestBundle\Services\FixturesLoaderFactory;
+use AlexisLefebvre\FixturesBundle\Services\FixturesLoaderFactory;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**

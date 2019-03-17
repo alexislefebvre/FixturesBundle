@@ -11,9 +11,9 @@ declare(strict_types=1);
  * with this source code in the file LICENSE.
  */
 
-namespace Liip\FunctionalTestBundle\Tests\AppConfigMysql;
+namespace AlexisLefebvre\FixturesBundle\Tests\AppConfigMysql;
 
-use Liip\FunctionalTestBundle\Tests\App\AppKernel;
+use AlexisLefebvre\FixturesBundle\Tests\App\AppKernel;
 use Symfony\Component\Config\Loader\LoaderInterface;
 
 class AppConfigMysqlKernel extends AppKernel

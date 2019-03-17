@@ -11,11 +11,11 @@ declare(strict_types=1);
  * with this source code in the file LICENSE.
  */
 
-namespace Liip\FunctionalTestBundle;
+namespace AlexisLefebvre\FixturesBundle;
 
 use Doctrine\Common\Annotations\Reader;
-use Liip\FunctionalTestBundle\Annotations\QueryCount;
-use Liip\FunctionalTestBundle\Exception\AllowedQueriesExceededException;
+use AlexisLefebvre\FixturesBundle\Annotations\QueryCount;
+use AlexisLefebvre\FixturesBundle\Exception\AllowedQueriesExceededException;
 
 final class QueryCounter
 {
@@ -67,7 +67,7 @@ final class QueryCounter
 
                 foreach ($annotations as $annotationClass) {
                     if ($annotationClass instanceof QueryCount && isset($annotationClass->maxQueries)) {
-                        /* @var $annotations \Liip\FunctionalTestBundle\Annotations\QueryCount */
+                        /* @var $annotations \AlexisLefebvre\FixturesBundle\Annotations\QueryCount */
 
                         return $annotationClass->maxQueries;
                     }

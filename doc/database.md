@@ -62,7 +62,7 @@ Tips for Fixture Loading Tests
 
  3. For create custom database cache service:
  
-    Create cache class, implement `\Liip\FunctionalTestBundle\Services\DatabaseBackup\DatabaseBackupInterface` and add it to config
+    Create cache class, implement `\AlexisLefebvre\FixturesBundle\Services\DatabaseBackup\DatabaseBackupInterface` and add it to config
 
     For example:
     ```yaml
@@ -83,7 +83,7 @@ Tips for Fixture Loading Tests
  4. Load your Doctrine fixtures in your tests:
 
     ```php
-    use Liip\FunctionalTestBundle\Test\WebTestCase;
+    use AlexisLefebvre\FixturesBundle\Test\WebTestCase;
 
     class MyControllerTest extends WebTestCase
     {
@@ -108,7 +108,7 @@ Tips for Fixture Loading Tests
     `loadFixtures` without any argument.
 
     ```php
-    use Liip\FunctionalTestBundle\Test\WebTestCase;
+    use AlexisLefebvre\FixturesBundle\Test\WebTestCase;
 
     class MyControllerTest extends WebTestCase
     {
@@ -128,7 +128,7 @@ Tips for Fixture Loading Tests
     to the `setExcludedDoctrineTables` method before loading the fixtures.
 
     ```php
-    use Liip\FunctionalTestBundle\Test\WebTestCase;
+    use AlexisLefebvre\FixturesBundle\Test\WebTestCase;
 
     class MyControllerTest extends WebTestCase
     {
@@ -147,7 +147,7 @@ Tips for Fixture Loading Tests
  to consider use the second parameter $append with value true.
 
     ```php
-        use Liip\FunctionalTestBundle\Test\WebTestCase;
+        use AlexisLefebvre\FixturesBundle\Test\WebTestCase;
 
         class MyControllerTest extends WebTestCase
         {
@@ -166,7 +166,7 @@ Tips for Fixture Loading Tests
     specify the service id of the registry manager:
 
     ```php
-    use Liip\FunctionalTestBundle\Test\WebTestCase;
+    use AlexisLefebvre\FixturesBundle\Test\WebTestCase;
 
     class MyControllerTest extends WebTestCase
     {
@@ -185,7 +185,7 @@ Tips for Fixture Loading Tests
 
 ### Loading Fixtures Using Alice
 If you would like to setup your fixtures with yml files using [Alice](https://github.com/nelmio/alice),
-[`Liip\FunctionalTestBundle\Test\WebTestCase`](Test/WebTestCase.php) has a helper function `loadFixtureFiles`
+[`AlexisLefebvre\FixturesBundle\Test\WebTestCase`](Test/WebTestCase.php) has a helper function `loadFixtureFiles`
 which takes an array of resources, or paths to yml files, and returns an array of objects.
 This method uses the [Theofidry AliceDataFixtures loader](https://github.com/theofidry/AliceDataFixtures#doctrine-orm)
 rather than the FunctionalTestBundle's load methods.
@@ -250,7 +250,7 @@ automatically, you'll need to do that yourself. For example, you could write a
 
 ```php
 use Doctrine\ORM\Tools\SchemaTool;
-use Liip\FunctionalTestBundle\Test\WebTestCase;
+use AlexisLefebvre\FixturesBundle\Test\WebTestCase;
 
 class AccountControllerTest extends WebTestCase
 {

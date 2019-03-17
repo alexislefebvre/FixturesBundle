@@ -11,12 +11,12 @@ declare(strict_types=1);
  * with this source code in the file LICENSE.
  */
 
-namespace Liip\FunctionalTestBundle\Tests\AppConfigPhpcr\DataFixtures\PHPCR;
+namespace AlexisLefebvre\FixturesBundle\Tests\AppConfigPhpcr\DataFixtures\PHPCR;
 
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\ODM\PHPCR\DocumentManager;
-use Liip\FunctionalTestBundle\Tests\AppConfigPhpcr\Document\Task;
+use AlexisLefebvre\FixturesBundle\Tests\AppConfigPhpcr\Document\Task;
 
 class LoadTaskData implements FixtureInterface
 {

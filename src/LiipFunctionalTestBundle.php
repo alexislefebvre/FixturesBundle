@@ -11,10 +11,10 @@ declare(strict_types=1);
  * with this source code in the file LICENSE.
  */
 
-namespace Liip\FunctionalTestBundle;
+namespace AlexisLefebvre\FixturesBundle;
 
-use Liip\FunctionalTestBundle\DependencyInjection\Compiler\OptionalValidatorPass;
-use Liip\FunctionalTestBundle\DependencyInjection\Compiler\SetTestClientPass;
+use AlexisLefebvre\FixturesBundle\DependencyInjection\Compiler\OptionalValidatorPass;
+use AlexisLefebvre\FixturesBundle\DependencyInjection\Compiler\SetTestClientPass;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

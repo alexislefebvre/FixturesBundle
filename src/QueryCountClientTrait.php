@@ -11,7 +11,7 @@ declare(strict_types=1);
  * with this source code in the file LICENSE.
  */
 
-namespace Liip\FunctionalTestBundle;
+namespace AlexisLefebvre\FixturesBundle;
 
 /**
  * @author Sullivan Senechal <soullivaneuh@gmail.com>

@@ -11,9 +11,9 @@ declare(strict_types=1);
  * with this source code in the file LICENSE.
  */
 
-namespace Liip\FunctionalTestBundle\Tests\DependencyInjection;
+namespace AlexisLefebvre\FixturesBundle\Tests\DependencyInjection;
 
-use Liip\FunctionalTestBundle\Tests\AppConfig\AppConfigKernel;
+use AlexisLefebvre\FixturesBundle\Tests\AppConfig\AppConfigKernel;
 
 /**
  * Use Tests/AppConfig/AppConfigKernel.php instead of

@@ -4,7 +4,7 @@
            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <services>
-        <service id="Liip\FunctionalTestBundle\Command\RunParatestCommand" class="Liip\FunctionalTestBundle\Command\RunParatestCommand">
+        <service id="AlexisLefebvre\FixturesBundle\Command\RunParatestCommand" class="AlexisLefebvre\FixturesBundle\Command\RunParatestCommand">
             <tag name="console.command" />
         </service>
     </services>

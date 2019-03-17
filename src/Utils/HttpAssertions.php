@@ -11,9 +11,9 @@ declare(strict_types=1);
  * with this source code in the file LICENSE.
  */
 
-namespace Liip\FunctionalTestBundle\Utils;
+namespace AlexisLefebvre\FixturesBundle\Utils;
 
-use Liip\FunctionalTestBundle\Test\ValidationErrorsConstraint;
+use AlexisLefebvre\FixturesBundle\Test\ValidationErrorsConstraint;
 use PHPUnit\Framework\TestCase;
 use Symfony\Bundle\FrameworkBundle\Client;
 use Symfony\Component\DependencyInjection\ContainerInterface;

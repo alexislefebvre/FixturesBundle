@@ -9,12 +9,12 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Liip\FunctionalTestBundle\Services;
+namespace AlexisLefebvre\FixturesBundle\Services;
 
 use Doctrine\Common\Annotations\AnnotationReader;
-use Liip\FunctionalTestBundle\Annotations\DisableDatabaseCache;
-use Liip\FunctionalTestBundle\Services\DatabaseTools\AbstractDatabaseTool;
-use Liip\FunctionalTestBundle\Test\WebTestCase;
+use AlexisLefebvre\FixturesBundle\Annotations\DisableDatabaseCache;
+use AlexisLefebvre\FixturesBundle\Services\DatabaseTools\AbstractDatabaseTool;
+use AlexisLefebvre\FixturesBundle\Test\WebTestCase;
 use Symfony\Bridge\Doctrine\ManagerRegistry;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
