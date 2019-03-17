@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 /*
- * This file is part of the Liip/FunctionalTestBundle
+ * This file is part of the AlexisLefebvre/FixturesBundle
  *
  * (c) Lukas Kahwe Smith <smith@pooteeweet.org>
  *
@@ -14,7 +14,7 @@ declare(strict_types=1);
 namespace AlexisLefebvre\FixturesBundle\Tests\AppConfig;
 
 /*
- * This file is part of the Liip/FunctionalTestBundle
+ * This file is part of the AlexisLefebvre/FixturesBundle
  *
  * (c) Lukas Kahwe Smith <smith@pooteeweet.org>
  *
