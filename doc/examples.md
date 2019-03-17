@@ -24,10 +24,13 @@ declare(strict_types=1);
 
 namespace Liip\FooBundle\Tests;
 
-use Liip\FixturesBundle\Test\WebTestCase;
+use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
+use Liip\TestFixturesBundle\Test\FixturesTrait;
 
 class ExampleFunctionalTest extends WebTestCase
 {
+    use FixturesTrait;
+
     /**
      * Example using LiipFunctionalBundle the fixture loader.
      */
