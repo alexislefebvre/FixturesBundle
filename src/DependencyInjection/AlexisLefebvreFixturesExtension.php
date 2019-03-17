@@ -18,7 +18,7 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 
-class AlexisLefebvreTestExtension extends Extension
+class AlexisLefebvreFixturesExtension extends Extension
 {
     /**
      * Loads the services based on your application configuration.
