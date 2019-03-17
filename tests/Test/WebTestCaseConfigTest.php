@@ -78,7 +78,7 @@ class WebTestCaseConfigTest extends WebTestCase
 
     /**
      * Log in as the user defined in the
-     * "liip_functional_test.authentication"
+     * "alexis_lefebvre_fixtures.authentication"
      * node from the configuration file.
      */
     public function testIndexAuthenticationTrue(): void

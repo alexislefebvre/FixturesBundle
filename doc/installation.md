@@ -53,7 +53,7 @@ Installation
     * For symfony 3:
         ```yaml
         # app/config/config_test.yml
-        liip_functional_test: ~
+        alexis_lefebvre_fixtures: ~
         ```
  
         ```yaml
@@ -73,5 +73,5 @@ Installation
                 storage_id: session.storage.mock_file
                 name: MOCKSESSION
 
-        liip_functional_test: ~
+        alexis_lefebvre_fixtures: ~
         ```

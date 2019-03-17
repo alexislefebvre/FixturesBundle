@@ -113,7 +113,7 @@ abstract class AbstractDatabaseTool
 
     protected function getBackupService(): ?DatabaseBackupInterface
     {
-        $backupServiceParamName = strtolower('liip_functional_test.cache_db.'.(
+        $backupServiceParamName = strtolower('alexis_lefebvre_fixtures.cache_db.'.(
             ('ORM' === $this->registry->getName())
                 ? $this->connection->getDatabasePlatform()->getName()
                 : $this->getType()

@@ -53,8 +53,8 @@ class RunParatestCommand extends Command implements ContainerAwareInterface
 
     protected function prepare(): void
     {
-        $this->phpunit = $this->container->getParameter('liip_functional_test.paratest.phpunit');
-        $this->process = $this->container->getParameter('liip_functional_test.paratest.process');
+        $this->phpunit = $this->container->getParameter('alexis_lefebvre_fixtures.paratest.phpunit');
+        $this->process = $this->container->getParameter('alexis_lefebvre_fixtures.paratest.process');
 
         $this->testDbPath = $this->container->get('kernel')->getCacheDir();
         $this->output->writeln("Cleaning old dbs in $this->testDbPath ...");

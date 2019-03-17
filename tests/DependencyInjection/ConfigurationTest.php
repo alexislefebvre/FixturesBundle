@@ -37,7 +37,7 @@ class ConfigurationTest extends WebTestCase
      */
     public function testParameter($node, $value): void
     {
-        $name = 'liip_functional_test.'.$node;
+        $name = 'alexis_lefebvre_fixtures.'.$node;
 
         $this->assertNotNull($this->clientContainer);
 

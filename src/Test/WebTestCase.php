@@ -129,7 +129,7 @@ abstract class WebTestCase extends BaseWebTestCase
         // If `null`, is not yet set
         if (null === $this->verbosityLevel) {
             // Set the global verbosity level that is set as NORMAL by the TreeBuilder in Configuration
-            $level = strtoupper($this->getContainer()->getParameter('liip_functional_test.command_verbosity'));
+            $level = strtoupper($this->getContainer()->getParameter('alexis_lefebvre_fixtures.command_verbosity'));
             $verbosity = '\Symfony\Component\Console\Output\StreamOutput::VERBOSITY_'.$level;
 
             $this->verbosityLevel = constant($verbosity);
@@ -178,7 +178,7 @@ abstract class WebTestCase extends BaseWebTestCase
     {
         if (null === $this->decorated) {
             // Set the global decoration flag that is set to `true` by the TreeBuilder in Configuration
-            $this->decorated = $this->getContainer()->getParameter('liip_functional_test.command_decoration');
+            $this->decorated = $this->getContainer()->getParameter('alexis_lefebvre_fixtures.command_decoration');
         }
 
         // Check the local decorated flag
@@ -251,7 +251,7 @@ abstract class WebTestCase extends BaseWebTestCase
     {
         $container = $this->getContainer();
 
-        $dbToolCollection = $container->get('liip_functional_test.services.database_tool_collection');
+        $dbToolCollection = $container->get('alexis_lefebvre_fixtures.services.database_tool_collection');
         $dbTool = $dbToolCollection->get($omName, $registryName, $purgeMode, $this);
         $dbTool->setExcludedDoctrineTables($this->excludedDoctrineTables);
 
@@ -274,7 +274,7 @@ abstract class WebTestCase extends BaseWebTestCase
         /** @var ContainerInterface $container */
         $container = $this->getContainer();
 
-        $dbToolCollection = $container->get('liip_functional_test.services.database_tool_collection');
+        $dbToolCollection = $container->get('alexis_lefebvre_fixtures.services.database_tool_collection');
         $dbTool = $dbToolCollection->get($omName, $registryName, $purgeMode, $this);
         $dbTool->setExcludedDoctrineTables($this->excludedDoctrineTables);
 
@@ -350,7 +350,7 @@ abstract class WebTestCase extends BaseWebTestCase
      * Creates an instance of a lightweight Http client.
      *
      * If $authentication is set to 'true' it will use the content of
-     * 'liip_functional_test.authentication' to log in.
+     * 'alexis_lefebvre_fixtures.authentication' to log in.
      *
      * $params can be used to pass headers to the client, note that they have
      * to follow the naming format used in $_SERVER.
@@ -367,9 +367,9 @@ abstract class WebTestCase extends BaseWebTestCase
             if (true === $authentication) {
                 $authentication = [
                     'username' => $this->getContainer()
-                        ->getParameter('liip_functional_test.authentication.username'),
+                        ->getParameter('alexis_lefebvre_fixtures.authentication.username'),
                     'password' => $this->getContainer()
-                        ->getParameter('liip_functional_test.authentication.password'),
+                        ->getParameter('alexis_lefebvre_fixtures.authentication.password'),
                 ];
             }
 

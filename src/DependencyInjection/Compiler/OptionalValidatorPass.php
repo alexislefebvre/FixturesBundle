@@ -21,7 +21,7 @@ class OptionalValidatorPass implements CompilerPassInterface
     public function process(ContainerBuilder $container): void
     {
         if (!$container->hasDefinition('validator')) {
-            $container->removeDefinition('liip_functional_test.validator');
+            $container->removeDefinition('alexis_lefebvre_fixtures.validator');
         }
     }
 }

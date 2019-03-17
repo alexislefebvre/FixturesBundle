@@ -39,9 +39,9 @@ class ConfigurationConfigTest extends ConfigurationTest
     public function parametersProvider(): array
     {
         return [
-            ['cache_db.sqlite', 'liip_functional_test.services_database_backup.sqlite'],
-            ['cache_db.mysql', 'liip_functional_test.services_database_backup.mysql'],
-            ['cache_db.mongodb', 'liip_functional_test.services_database_backup.mongodb'],
+            ['cache_db.sqlite', 'alexis_lefebvre_fixtures.services_database_backup.sqlite'],
+            ['cache_db.mysql', 'alexis_lefebvre_fixtures.services_database_backup.mysql'],
+            ['cache_db.mongodb', 'alexis_lefebvre_fixtures.services_database_backup.mongodb'],
             ['command_verbosity', 'very_verbose'],
             ['command_decoration', false],
             ['query.max_query_count', 1],

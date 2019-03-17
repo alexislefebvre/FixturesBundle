@@ -35,7 +35,7 @@ class AppConfigKernel extends AppKernel
         // Load the default file.
         parent::registerContainerConfiguration($loader);
 
-        // Load the file with "liip_functional_test" parameters
+        // Load the file with "alexis_lefebvre_fixtures" parameters
         $loader->load(__DIR__.'/config.yml');
     }
 }

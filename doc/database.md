@@ -55,9 +55,9 @@ Tips for Fixture Loading Tests
     ```yaml
     # sf3: app/config/config_test.yml
     # sf4: config/packages/test/framework.yaml
-    liip_functional_test:
+    alexis_lefebvre_fixtures:
         cache_db:
-            sqlite: liip_functional_test.services_database_backup.sqlite
+            sqlite: alexis_lefebvre_fixtures.services_database_backup.sqlite
     ```
 
  3. For create custom database cache service:
@@ -67,18 +67,18 @@ Tips for Fixture Loading Tests
     For example:
     ```yaml
     # app/config/config_test.yml
-    liip_functional_test:
+    alexis_lefebvre_fixtures:
         cache_db:
-            mysql: liip_functional_test.services_database_backup.mysql
-            mongodb: liip_functional_test.services_database_backup.mongodb
+            mysql: alexis_lefebvre_fixtures.services_database_backup.mysql
+            mongodb: alexis_lefebvre_fixtures.services_database_backup.mongodb
             phpcr: ...
             db2: ...
             [Other \Doctrine\DBAL\Platforms\AbstractPlatform name]: ...
     ```
 
-    **Attention: `liip_functional_test.services_database_backup.mysql` required `mysql-client` installed on server.**
+    **Attention: `alexis_lefebvre_fixtures.services_database_backup.mysql` required `mysql-client` installed on server.**
 
-    **Attention: `liip_functional_test.services_database_backup.mongodb` required `mongodb-clients` installed on server.**
+    **Attention: `alexis_lefebvre_fixtures.services_database_backup.mongodb` required `mongodb-clients` installed on server.**
  
  4. Load your Doctrine fixtures in your tests:
 

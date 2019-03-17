@@ -5,7 +5,7 @@ If you need to test commands, you might need to tweak the output to your needs.
 You can adjust the command verbosity:
 ```yaml
 # app/config/config_test.yml
-liip_functional_test:
+alexis_lefebvre_fixtures:
     command_verbosity: debug
 ```
 Supported values are ```quiet```, ```normal```, ```verbose```, ```very_verbose```
@@ -28,7 +28,7 @@ Depending where your tests are running, you might want to disable the output
 decorator:
 ```yaml
 # app/config/config_test.yml
-liip_functional_test:
+alexis_lefebvre_fixtures:
     command_decoration: false
 ```
 The default value is true.

@@ -6,7 +6,7 @@ The `WebTestCase` provides a conveniency method to create an already logged in c
 
 You have three alternatives to create an already logged in client:
 
-1. Use the `liip_functional_test.authentication` key in the `config_test.yml` file;
+1. Use the `alexis_lefebvre_fixtures.authentication` key in the `config_test.yml` file;
 2. Pass an array with login parameters directly when you call the method;
 3. Use the method `WebTestCase::loginAs()`;
 
@@ -15,7 +15,7 @@ You have three alternatives to create an already logged in client:
 You can set the credentials for your test user in your `config_test.yml` file:
 
 ```yaml
-liip_functional_test:
+alexis_lefebvre_fixtures:
     authentication:
         username: "a valid username"
         password: "the password of that user"

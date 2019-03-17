@@ -54,7 +54,7 @@ You can modify process amount and phpunit location with the following:
 
 ```yaml
 # app/config/config_test.yml
-liip_functional_test:
+alexis_lefebvre_fixtures:
     paratest:
         process:5 #default is 5
         phpunit:'./bin/phpunit' #default is ./bin/phpunit

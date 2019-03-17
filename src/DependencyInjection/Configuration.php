@@ -27,12 +27,12 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder(): TreeBuilder
     {
         if (method_exists(TreeBuilder::class, 'getRootNode')) {
-            $treeBuilder = new TreeBuilder('liip_functional_test');
+            $treeBuilder = new TreeBuilder('alexis_lefebvre_fixtures');
             $rootNode = $treeBuilder->getRootNode();
         } else {
             // BC layer for symfony/config 4.1 and older
             $treeBuilder = new TreeBuilder();
-            $rootNode = $treeBuilder->root('liip_functional_test', 'array');
+            $rootNode = $treeBuilder->root('alexis_lefebvre_fixtures', 'array');
         }
 
         $rootNode

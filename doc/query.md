@@ -14,7 +14,7 @@ framework:
         enabled: true
         collect: true
 
-liip_functional_test:
+alexis_lefebvre_fixtures:
     query:
         max_query_count: 50
 ```

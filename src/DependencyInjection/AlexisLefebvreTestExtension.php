@@ -40,10 +40,10 @@ class AlexisLefebvreTestExtension extends Extension
 
         foreach ($config as $key => $value) {
             // If the node is an array,
-            // e.g. "liip_functional_test.query.max_query_count",
+            // e.g. "alexis_lefebvre_fixtures.query.max_query_count",
             // set the value as
-            // "liip_functional_test.query.max_query_count"
-            // instead of an array "liip_functional_test.query"
+            // "alexis_lefebvre_fixtures.query.max_query_count"
+            // instead of an array "alexis_lefebvre_fixtures.query"
             // with a "max_query_count" key.
             if (is_array($value)) {
                 foreach ($value as $key2 => $value2) {
@@ -55,7 +55,7 @@ class AlexisLefebvreTestExtension extends Extension
             }
         }
 
-        $definition = $container->getDefinition('liip_functional_test.query.count_client');
+        $definition = $container->getDefinition('alexis_lefebvre_fixtures.query.count_client');
         $definition->setShared(false);
     }
 }

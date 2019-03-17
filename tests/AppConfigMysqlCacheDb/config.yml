@@ -1,5 +1,5 @@
 # inherits configuration from ../AppConfigMysql/config.yml
 
-liip_functional_test:
+alexis_lefebvre_fixtures:
     cache_db:
-        mysql: liip_functional_test.services_database_backup.mysql
+        mysql: alexis_lefebvre_fixtures.services_database_backup.mysql
