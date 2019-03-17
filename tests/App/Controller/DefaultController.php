@@ -41,7 +41,7 @@ class DefaultController extends Controller
     {
         /** @var \AlexisLefebvre\FixturesBundle\Tests\App\Entity\User $user */
         $user = $this->getDoctrine()
-            ->getRepository('LiipFunctionalTestBundle:User')
+            ->getRepository('AlexisLefebvreFixturesBundle:User')
             ->find($userId);
 
         if (!$user) {

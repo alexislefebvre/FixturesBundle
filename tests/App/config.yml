@@ -41,11 +41,11 @@ doctrine:
             default:
                 connection: default
                 mappings:
-                    LiipFunctionalTestBundle:
+                    AlexisLefebvreFixturesBundle:
                         type: php
                         dir: "%kernel.root_dir%/../App/Entity"
                         prefix: 'AlexisLefebvre\FixturesBundle\Tests\App\Entity'
-                    LiipFunctionalTestBundleYml:
+                    AlexisLefebvreFixturesBundleYml:
                         type: "yml"
                         dir: "%kernel.root_dir%/../App/Resources/config/doctrine"
                         prefix: 'AlexisLefebvre\FixturesBundle\Tests\App\Entity'

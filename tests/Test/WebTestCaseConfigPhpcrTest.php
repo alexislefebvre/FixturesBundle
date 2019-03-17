@@ -41,7 +41,7 @@ class WebTestCaseConfigPhpcrTest extends WebTestCase
             $this->markTestSkipped('Need doctrine/phpcr-bundle package.');
         }
 
-        // https://github.com/liip/LiipFunctionalTestBundle#non-sqlite
+        // https://github.com/liip/AlexisLefebvreFixturesBundle#non-sqlite
         $em = $this->getContainer()->get('doctrine')->getManager();
         if (!isset($metadatas)) {
             $metadatas = $em->getMetadataFactory()->getAllMetadata();

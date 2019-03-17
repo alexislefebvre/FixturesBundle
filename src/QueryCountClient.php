@@ -47,7 +47,7 @@ class QueryCountClient extends Client
             echo "\n".
                 'Profiler is disabled, it must be enabled for the '.
                 'Query Counter. '.
-                'See https://github.com/liip/LiipFunctionalTestBundle#query-counter'.
+                'See https://github.com/liip/AlexisLefebvreFixturesBundle#query-counter'.
                 "\n";
             // @codeCoverageIgnoreEnd
         }

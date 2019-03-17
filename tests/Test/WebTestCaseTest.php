@@ -92,7 +92,7 @@ class WebTestCaseTest extends WebTestCase
         );
 
         $this->assertSame(
-            'LiipFunctionalTestBundle',
+            'AlexisLefebvreFixturesBundle',
             $crawler->filter('h1')->text()
         );
     }
@@ -210,7 +210,7 @@ EOF;
         );
 
         $this->assertSame(
-            'LiipFunctionalTestBundle',
+            'AlexisLefebvreFixturesBundle',
             $crawler->filter('h1')->text()
         );
     }
@@ -229,7 +229,7 @@ EOF;
         $this->assertInternalType('string', $content);
 
         $this->assertContains(
-            '<h1>LiipFunctionalTestBundle</h1>',
+            '<h1>AlexisLefebvreFixturesBundle</h1>',
             $content
         );
     }
@@ -332,7 +332,7 @@ EOF;
         $em = $this->client->getContainer()
             ->get('doctrine.orm.entity_manager');
 
-        $users = $em->getRepository('LiipFunctionalTestBundle:User')
+        $users = $em->getRepository('AlexisLefebvreFixturesBundle:User')
             ->findAll();
 
         // There are 2 users.
@@ -342,7 +342,7 @@ EOF;
         );
 
         /** @var \AlexisLefebvre\FixturesBundle\Tests\App\Entity\User $user */
-        $user = $em->getRepository('LiipFunctionalTestBundle:User')
+        $user = $em->getRepository('AlexisLefebvreFixturesBundle:User')
             ->findOneBy([
                 'id' => 1,
             ]);
@@ -373,7 +373,7 @@ EOF;
             ->get('doctrine.orm.entity_manager');
 
         /** @var \AlexisLefebvre\FixturesBundle\Tests\App\Entity\User $user */
-        $user = $em->getRepository('LiipFunctionalTestBundle:User')
+        $user = $em->getRepository('AlexisLefebvreFixturesBundle:User')
             ->findOneBy([
                 'id' => 1,
             ]);
@@ -388,7 +388,7 @@ EOF;
         );
 
         /** @var \AlexisLefebvre\FixturesBundle\Tests\App\Entity\User $user */
-        $user = $em->getRepository('LiipFunctionalTestBundle:User')
+        $user = $em->getRepository('AlexisLefebvreFixturesBundle:User')
             ->findOneBy([
                 'id' => 3,
             ]);
@@ -420,7 +420,7 @@ EOF;
         $em = $this->client->getContainer()
             ->get('doctrine.orm.entity_manager');
 
-        $users = $em->getRepository('LiipFunctionalTestBundle:User')
+        $users = $em->getRepository('AlexisLefebvreFixturesBundle:User')
             ->findAll();
 
         // The two files with fixtures have been loaded, there are 4 users.
@@ -447,7 +447,7 @@ EOF;
         $em = $this->client->getContainer()
             ->get('doctrine.orm.entity_manager');
 
-        $users = $em->getRepository('LiipFunctionalTestBundle:User')
+        $users = $em->getRepository('AlexisLefebvreFixturesBundle:User')
             ->findAll();
 
         // The two files with fixtures have been loaded, there are 4 users.
@@ -480,7 +480,7 @@ EOF;
         $em = $this->client->getContainer()
             ->get('doctrine.orm.entity_manager');
 
-        $users = $em->getRepository('LiipFunctionalTestBundle:User')
+        $users = $em->getRepository('AlexisLefebvreFixturesBundle:User')
             ->findAll();
 
         $this->assertSame(
@@ -489,7 +489,7 @@ EOF;
         );
 
         /** @var \AlexisLefebvre\FixturesBundle\Tests\App\Entity\User $user */
-        $user = $em->getRepository('LiipFunctionalTestBundle:User')
+        $user = $em->getRepository('AlexisLefebvreFixturesBundle:User')
             ->findOneBy([
                 'id' => 1,
             ]);
@@ -498,7 +498,7 @@ EOF;
             $user->getEnabled()
         );
 
-        $user = $em->getRepository('LiipFunctionalTestBundle:User')
+        $user = $em->getRepository('AlexisLefebvreFixturesBundle:User')
             ->findOneBy([
                 'id' => 10,
             ]);
@@ -580,7 +580,7 @@ EOF;
         $em = $this->client->getContainer()
             ->get('doctrine.orm.entity_manager');
 
-        $users = $em->getRepository('LiipFunctionalTestBundle:User')
+        $users = $em->getRepository('AlexisLefebvreFixturesBundle:User')
             ->findAll();
 
         $this->assertSame(
@@ -589,7 +589,7 @@ EOF;
         );
 
         /** @var \AlexisLefebvre\FixturesBundle\Tests\App\Entity\User $user */
-        $user = $em->getRepository('LiipFunctionalTestBundle:User')
+        $user = $em->getRepository('AlexisLefebvreFixturesBundle:User')
             ->findOneBy([
                 'id' => 1,
             ]);
@@ -622,7 +622,7 @@ EOF;
         $em = $this->client->getContainer()
             ->get('doctrine.orm.entity_manager');
 
-        $users = $em->getRepository('LiipFunctionalTestBundle:User')
+        $users = $em->getRepository('AlexisLefebvreFixturesBundle:User')
             ->findAll();
 
         $this->assertSame(
@@ -681,7 +681,7 @@ EOF;
         );
 
         $this->assertSame(
-            'LiipFunctionalTestBundle',
+            'AlexisLefebvreFixturesBundle',
             $crawler->filter('h1')->text()
         );
 
@@ -731,7 +731,7 @@ EOF;
     /**
      * Ensure form validation helpers still work with embedded controllers.
      *
-     * @see https://github.com/liip/LiipFunctionalTestBundle/issues/273
+     * @see https://github.com/liip/AlexisLefebvreFixturesBundle/issues/273
      */
     public function testFormWithEmbed(): void
     {

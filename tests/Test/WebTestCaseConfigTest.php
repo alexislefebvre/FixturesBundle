@@ -71,7 +71,7 @@ class WebTestCaseConfigTest extends WebTestCase
         );
 
         $this->assertSame(
-            'LiipFunctionalTestBundle',
+            'AlexisLefebvreFixturesBundle',
             $crawler->filter('h1')->text()
         );
     }
@@ -102,7 +102,7 @@ class WebTestCaseConfigTest extends WebTestCase
         );
 
         $this->assertSame(
-            'LiipFunctionalTestBundle',
+            'AlexisLefebvreFixturesBundle',
             $crawler->filter('h1')->text()
         );
     }
@@ -144,7 +144,7 @@ class WebTestCaseConfigTest extends WebTestCase
         );
 
         $this->assertSame(
-            'LiipFunctionalTestBundle',
+            'AlexisLefebvreFixturesBundle',
             $crawler->filter('h1')->text()
         );
     }
@@ -267,7 +267,7 @@ class WebTestCaseConfigTest extends WebTestCase
         $em = $this->getContainer()->get('doctrine.orm.entity_manager');
 
         /** @var \AlexisLefebvre\FixturesBundle\Tests\App\Entity\User $user1 */
-        $user1 = $em->getRepository('LiipFunctionalTestBundle:User')->findOneBy(['id' => 1]);
+        $user1 = $em->getRepository('AlexisLefebvreFixturesBundle:User')->findOneBy(['id' => 1]);
 
         // Store random data, in order to check it after reloading fixtures.
         $user1Salt = $user1->getSalt();
@@ -278,7 +278,7 @@ class WebTestCaseConfigTest extends WebTestCase
         $this->loadFixtures($fixtures);
 
         /** @var \AlexisLefebvre\FixturesBundle\Tests\App\Entity\User $user1 */
-        $user1 = $em->getRepository('LiipFunctionalTestBundle:User')->findOneBy(['id' => 1]);
+        $user1 = $em->getRepository('AlexisLefebvreFixturesBundle:User')->findOneBy(['id' => 1]);
 
         //The salt are not the same because cache were not used
         $this->assertNotSame($user1Salt, $user1->getSalt());
@@ -302,7 +302,7 @@ class WebTestCaseConfigTest extends WebTestCase
         $em = $this->getContainer()->get('doctrine.orm.entity_manager');
 
         /** @var \AlexisLefebvre\FixturesBundle\Tests\App\Entity\User $user1 */
-        $user1 = $em->getRepository('LiipFunctionalTestBundle:User')
+        $user1 = $em->getRepository('AlexisLefebvreFixturesBundle:User')
             ->findOneBy(['id' => 1]);
 
         // Store random data, in order to check it after reloading fixtures.
@@ -341,7 +341,7 @@ class WebTestCaseConfigTest extends WebTestCase
             'File modification time of the backup has been updated.'
         );
 
-        $user1 = $em->getRepository('LiipFunctionalTestBundle:User')->findOneBy(['id' => 1]);
+        $user1 = $em->getRepository('AlexisLefebvreFixturesBundle:User')->findOneBy(['id' => 1]);
 
         // Check that random data has not been changed, to ensure that backup was created and loaded successfully.
         $this->assertSame($user1Salt, $user1->getSalt());
@@ -367,7 +367,7 @@ class WebTestCaseConfigTest extends WebTestCase
             'File modification time of the backup has not been updated.'
         );
 
-        $user1 = $em->getRepository('LiipFunctionalTestBundle:User')->findOneBy(['id' => 1]);
+        $user1 = $em->getRepository('AlexisLefebvreFixturesBundle:User')->findOneBy(['id' => 1]);
 
         // Check that random data has been changed, to ensure that backup was not used.
         $this->assertNotSame($user1Salt, $user1->getSalt());

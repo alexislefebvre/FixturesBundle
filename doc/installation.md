@@ -37,7 +37,7 @@ Installation
             if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {
                 // ...
                 if ('test' === $this->getEnvironment()) {
-                    $bundles[] = new AlexisLefebvre\FixturesBundle\LiipFunctionalTestBundle();
+                    $bundles[] = new AlexisLefebvre\FixturesBundle\AlexisLefebvreFixturesBundle();
                 }
             }
 

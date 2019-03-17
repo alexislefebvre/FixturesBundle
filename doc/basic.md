@@ -104,7 +104,7 @@ $content = $this->fetchContent('/contact');
 
 // `filter()` can't be used since the output is HTML code, check the content directly
 $this->assertContains(
-    '<h1>LiipFunctionalTestBundle</h1>',
+    '<h1>AlexisLefebvreFixturesBundle</h1>',
     $content
 );
 ```

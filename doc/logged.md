@@ -55,7 +55,7 @@ $client = $this->makeClient();
 Remember that `WebTestCase::loginAs()` accepts objects that implement the interface `Symfony\Component\Security\Core\User\UserInterface`. 
 
 **If you get the error message *"Missing session.storage.options#name"***, you have to simply add to your
-[`config_test.yml`](https://github.com/liip/LiipFunctionalTestBundle/blob/master/Tests/App/config.yml#L16)
+[`config_test.yml`](https://github.com/liip/AlexisLefebvreFixturesBundle/blob/master/Tests/App/config.yml#L16)
 file the key `name`:
 
 ```yaml

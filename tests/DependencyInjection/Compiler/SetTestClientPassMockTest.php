@@ -82,9 +82,9 @@ class SetTestClientPassMockTest extends TestCase
             $setTestClientPass->process($container);
         } catch (\Exception $e) {
             $this->assertSame(
-                'The LiipFunctionalTestBundle\'s Query Counter can only be used in the test environment.'.
+                'The AlexisLefebvreFixturesBundle\'s Query Counter can only be used in the test environment.'.
                 PHP_EOL.
-                'See https://github.com/liip/LiipFunctionalTestBundle#only-in-test-environment',
+                'See https://github.com/liip/AlexisLefebvreFixturesBundle#only-in-test-environment',
                 $e->getMessage()
             );
 

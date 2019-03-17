@@ -2,7 +2,7 @@ Introduction
 ============
 
 [fastest](https://github.com/liuggio/fastest) is a tool for executing PHPUnit tests in parallel.
-Once LiipFunctionalTestBundle has been configured, it's easy to use fastest.
+Once AlexisLefebvreFixturesBundle has been configured, it's easy to use fastest.
 
 Installation
 ============

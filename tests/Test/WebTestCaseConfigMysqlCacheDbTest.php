@@ -54,7 +54,7 @@ class WebTestCaseConfigMysqlCacheDbTest extends WebTestCaseConfigMysqlTest
         $em = $this->getContainer()
             ->get('doctrine.orm.entity_manager');
 
-        $users = $em->getRepository('LiipFunctionalTestBundle:User')
+        $users = $em->getRepository('AlexisLefebvreFixturesBundle:User')
             ->findAll();
 
         // Check that all User have been saved to database
@@ -64,7 +64,7 @@ class WebTestCaseConfigMysqlCacheDbTest extends WebTestCaseConfigMysqlTest
         );
 
         /** @var \AlexisLefebvre\FixturesBundle\Tests\App\Entity\User $user1 */
-        $user1 = $em->getRepository('LiipFunctionalTestBundle:User')
+        $user1 = $em->getRepository('AlexisLefebvreFixturesBundle:User')
             ->findOneBy([
                 'id' => 1,
             ]);
@@ -84,7 +84,7 @@ class WebTestCaseConfigMysqlCacheDbTest extends WebTestCaseConfigMysqlTest
         // Clean database
         $this->loadFixtures();
 
-        $users = $em->getRepository('LiipFunctionalTestBundle:User')
+        $users = $em->getRepository('AlexisLefebvreFixturesBundle:User')
             ->findAll();
 
         // Check that all User have been removed from database
@@ -98,7 +98,7 @@ class WebTestCaseConfigMysqlCacheDbTest extends WebTestCaseConfigMysqlTest
             'AlexisLefebvre\FixturesBundle\Tests\App\DataFixtures\ORM\LoadUserData',
         ]);
 
-        $users = $em->getRepository('LiipFunctionalTestBundle:User')
+        $users = $em->getRepository('AlexisLefebvreFixturesBundle:User')
             ->findAll();
 
         // Check that all User have been loaded again in database
@@ -107,7 +107,7 @@ class WebTestCaseConfigMysqlCacheDbTest extends WebTestCaseConfigMysqlTest
             $users
         );
 
-        $user1 = $em->getRepository('LiipFunctionalTestBundle:User')
+        $user1 = $em->getRepository('AlexisLefebvreFixturesBundle:User')
             ->findOneBy([
                 'id' => 1,
             ]);
