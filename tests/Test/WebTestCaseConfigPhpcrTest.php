@@ -11,12 +11,12 @@ declare(strict_types=1);
  * with this source code in the file LICENSE.
  */
 
-namespace Liip\TestFixturesBundle\Tests\Test;
+namespace Liip\Acme\Tests\Test;
 
 use Doctrine\Bundle\PHPCRBundle\DoctrinePHPCRBundle;
 use Doctrine\ORM\Tools\SchemaTool;
+use Liip\Acme\Tests\AppConfigPhpcr\AppConfigPhpcrKernel;
 use Liip\TestFixturesBundle\Test\FixturesTrait;
-use Liip\TestFixturesBundle\Tests\AppConfigPhpcr\AppConfigPhpcrKernel;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 /**
@@ -62,7 +62,7 @@ class WebTestCaseConfigPhpcrTest extends WebTestCase
     public function testLoadFixturesPhPCr(): void
     {
         $fixtures = $this->loadFixtures([
-            'Liip\TestFixturesBundle\Tests\AppConfigPhpcr\DataFixtures\PHPCR\LoadTaskData',
+            'Liip\Acme\Tests\AppConfigPhpcr\DataFixtures\PHPCR\LoadTaskData',
         ], false, null, 'doctrine_phpcr');
 
         $this->assertInstanceOf(

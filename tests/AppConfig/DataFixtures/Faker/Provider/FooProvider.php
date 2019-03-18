@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 /*
- * This file is part of the Liip\TestsFixturesBundle
+ * This file is part of the Liip/TestsFixturesBundle
  *
  * (c) Lukas Kahwe Smith <smith@pooteeweet.org>
  *
@@ -11,7 +11,7 @@ declare(strict_types=1);
  * with this source code in the file LICENSE.
  */
 
-namespace Liip\TestsFixturesBundle\Tests\AppConfig\DataFixtures\Faker\Provider;
+namespace Liip\Acme\Tests\AppConfig\DataFixtures\Faker\Provider;
 
 class FooProvider
 {

@@ -11,12 +11,12 @@ declare(strict_types=1);
  * with this source code in the file LICENSE.
  */
 
-namespace Liip\TestFixturesBundle\Tests\Test;
+namespace Liip\Acme\Tests\Test;
 
 use Doctrine\Common\Annotations\Annotation\IgnoreAnnotation;
 use Doctrine\Common\DataFixtures\Purger\ORMPurger;
+use Liip\Acme\Tests\AppConfigMysql\AppConfigMysqlKernel;
 use Liip\TestFixturesBundle\Test\FixturesTrait;
-use Liip\TestFixturesBundle\Tests\AppConfigMysql\AppConfigMysqlKernel;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 /**
@@ -67,7 +67,7 @@ class WebTestCaseConfigMysqlTest extends WebTestCase
     public function testLoadFixtures(): void
     {
         $fixtures = $this->loadFixtures([
-            'Liip\TestFixturesBundle\Tests\App\DataFixtures\ORM\LoadUserData',
+            'Liip\Acme\Tests\App\DataFixtures\ORM\LoadUserData',
         ]);
 
         $this->assertInstanceOf(
@@ -93,7 +93,7 @@ class WebTestCaseConfigMysqlTest extends WebTestCase
         $em = $this->getContainer()
             ->get('doctrine.orm.entity_manager');
 
-        /** @var \Liip\TestFixturesBundle\Tests\App\Entity\User $user */
+        /** @var \Liip\Acme\Tests\App\Entity\User $user */
         $user = $em->getRepository('LiipTestFixturesBundle:User')
             ->findOneBy([
                 'id' => 1,
@@ -115,11 +115,11 @@ class WebTestCaseConfigMysqlTest extends WebTestCase
     public function testAppendFixtures(): void
     {
         $this->loadFixtures([
-            'Liip\TestFixturesBundle\Tests\App\DataFixtures\ORM\LoadUserData',
+            'Liip\Acme\Tests\App\DataFixtures\ORM\LoadUserData',
         ]);
 
         $this->loadFixtures(
-            ['Liip\TestFixturesBundle\Tests\App\DataFixtures\ORM\LoadSecondUserData'],
+            ['Liip\Acme\Tests\App\DataFixtures\ORM\LoadSecondUserData'],
             true
         );
 
@@ -136,7 +136,7 @@ class WebTestCaseConfigMysqlTest extends WebTestCase
             $users
         );
 
-        /** @var \Liip\TestFixturesBundle\Tests\App\Entity\User $user */
+        /** @var \Liip\Acme\Tests\App\Entity\User $user */
         $user1 = $em->getRepository('LiipTestFixturesBundle:User')
             ->findOneBy([
                 'id' => 1,
@@ -153,7 +153,7 @@ class WebTestCaseConfigMysqlTest extends WebTestCase
             $user1->getEnabled()
         );
 
-        /** @var \Liip\TestFixturesBundle\Tests\App\Entity\User $user */
+        /** @var \Liip\Acme\Tests\App\Entity\User $user */
         $user3 = $em->getRepository('LiipTestFixturesBundle:User')
             ->findOneBy([
                 'id' => 3,
@@ -182,7 +182,7 @@ class WebTestCaseConfigMysqlTest extends WebTestCase
     public function testLoadFixturesAndExcludeFromPurge(): void
     {
         $fixtures = $this->loadFixtures([
-            'Liip\TestFixturesBundle\Tests\App\DataFixtures\ORM\LoadUserData',
+            'Liip\Acme\Tests\App\DataFixtures\ORM\LoadUserData',
         ]);
 
         $this->assertInstanceOf(
@@ -222,7 +222,7 @@ class WebTestCaseConfigMysqlTest extends WebTestCase
     public function testLoadFixturesAndPurge(): void
     {
         $fixtures = $this->loadFixtures([
-            'Liip\TestFixturesBundle\Tests\App\DataFixtures\ORM\LoadUserData',
+            'Liip\Acme\Tests\App\DataFixtures\ORM\LoadUserData',
         ]);
 
         $this->assertInstanceOf(
@@ -255,7 +255,7 @@ class WebTestCaseConfigMysqlTest extends WebTestCase
 
         // Reload fixtures
         $this->loadFixtures([
-            'Liip\TestFixturesBundle\Tests\App\DataFixtures\ORM\LoadUserData',
+            'Liip\Acme\Tests\App\DataFixtures\ORM\LoadUserData',
         ]);
 
         $users = $em->getRepository('LiipTestFixturesBundle:User')
@@ -310,7 +310,7 @@ class WebTestCaseConfigMysqlTest extends WebTestCase
             count($users)
         );
 
-        /** @var \Liip\TestFixturesBundle\Tests\App\Entity\User $user */
+        /** @var \Liip\Acme\Tests\App\Entity\User $user */
         $user = $em->getRepository('LiipTestFixturesBundle:User')
             ->findOneBy([
                 'id' => 1,

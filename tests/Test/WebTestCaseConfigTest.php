@@ -11,12 +11,12 @@ declare(strict_types=1);
  * with this source code in the file LICENSE.
  */
 
-namespace Liip\TestFixturesBundle\Tests\Test;
+namespace Liip\Acme\Tests\Test;
 
 use Doctrine\Common\Annotations\Annotation\IgnoreAnnotation;
+use Liip\Acme\Tests\AppConfig\AppConfigKernel;
 use Liip\TestFixturesBundle\Annotations\DisableDatabaseCache;
 use Liip\TestFixturesBundle\Test\FixturesTrait;
-use Liip\TestFixturesBundle\Tests\AppConfig\AppConfigKernel;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 /**
@@ -67,7 +67,7 @@ class WebTestCaseConfigTest extends WebTestCase
             $fixtures
         );
 
-        /** @var \Liip\TestFixturesBundle\Tests\App\Entity\User $user */
+        /** @var \Liip\Acme\Tests\App\Entity\User $user */
         $user = $fixtures['id1'];
 
         // The custom provider has not been used successfully.
@@ -81,7 +81,7 @@ class WebTestCaseConfigTest extends WebTestCase
             '@AcmeBundle/DataFixtures/ORM/user_with_custom_provider.yml',
         ]);
 
-        /** @var \Liip\TestFixturesBundle\Tests\App\Entity\User $user */
+        /** @var \Liip\Acme\Tests\App\Entity\User $user */
         $user = $fixtures['id1'];
 
         // The custom provider "foo" has been loaded and used successfully.
@@ -97,7 +97,7 @@ class WebTestCaseConfigTest extends WebTestCase
     public function testCacheCanBeDisabled(): void
     {
         $fixtures = [
-            'Liip\TestFixturesBundle\Tests\App\DataFixtures\ORM\LoadDependentUserData',
+            'Liip\Acme\Tests\App\DataFixtures\ORM\LoadDependentUserData',
         ];
 
         $this->loadFixtures($fixtures);
@@ -105,7 +105,7 @@ class WebTestCaseConfigTest extends WebTestCase
         // Load data from database
         $em = $this->getContainer()->get('doctrine.orm.entity_manager');
 
-        /** @var \Liip\TestFixturesBundle\Tests\App\Entity\User $user1 */
+        /** @var \Liip\Acme\Tests\App\Entity\User $user1 */
         $user1 = $em->getRepository('LiipTestFixturesBundle:User')->findOneBy(['id' => 1]);
 
         // Store random data, in order to check it after reloading fixtures.
@@ -116,7 +116,7 @@ class WebTestCaseConfigTest extends WebTestCase
         // Reload the fixtures.
         $this->loadFixtures($fixtures);
 
-        /** @var \Liip\TestFixturesBundle\Tests\App\Entity\User $user1 */
+        /** @var \Liip\Acme\Tests\App\Entity\User $user1 */
         $user1 = $em->getRepository('LiipTestFixturesBundle:User')->findOneBy(['id' => 1]);
 
         //The salt are not the same because cache were not used
@@ -129,10 +129,10 @@ class WebTestCaseConfigTest extends WebTestCase
     public function testBackupIsRefreshed(): void
     {
         // MD5 hash corresponding to these fixtures files.
-        $md5 = '0ded9d8daaeaeca1056b18b9d0d433b2';
+        $md5 = '779547fe76503b90075f8d15c74a28be';
 
         $fixtures = [
-            'Liip\TestFixturesBundle\Tests\App\DataFixtures\ORM\LoadDependentUserData',
+            'Liip\Acme\Tests\App\DataFixtures\ORM\LoadDependentUserData',
         ];
 
         $this->loadFixtures($fixtures);
@@ -140,7 +140,7 @@ class WebTestCaseConfigTest extends WebTestCase
         // Load data from database
         $em = $this->getContainer()->get('doctrine.orm.entity_manager');
 
-        /** @var \Liip\TestFixturesBundle\Tests\App\Entity\User $user1 */
+        /** @var \Liip\Acme\Tests\App\Entity\User $user1 */
         $user1 = $em->getRepository('LiipTestFixturesBundle:User')
             ->findOneBy(['id' => 1]);
 

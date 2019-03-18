@@ -11,12 +11,12 @@ declare(strict_types=1);
  * with this source code in the file LICENSE.
  */
 
-namespace Liip\TestFixturesBundle\Tests\Test;
+namespace Liip\Acme\Tests\Test;
 
 use Doctrine\Common\Annotations\Annotation\IgnoreAnnotation;
 use Doctrine\Common\DataFixtures\Purger\ORMPurger;
+use Liip\Acme\Tests\App\AppKernel;
 use Liip\TestFixturesBundle\Test\FixturesTrait;
-use Liip\TestFixturesBundle\Tests\App\AppKernel;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 /**
@@ -60,7 +60,7 @@ class WebTestCaseTest extends WebTestCase
     public function testLoadFixtures(): void
     {
         $fixtures = $this->loadFixtures([
-            'Liip\TestFixturesBundle\Tests\App\DataFixtures\ORM\LoadUserData',
+            'Liip\Acme\Tests\App\DataFixtures\ORM\LoadUserData',
         ]);
 
         $this->assertInstanceOf(
@@ -75,7 +75,7 @@ class WebTestCaseTest extends WebTestCase
             $repository
         );
 
-        /** @var \Liip\TestFixturesBundle\Tests\App\Entity\User $user1 */
+        /** @var \Liip\Acme\Tests\App\Entity\User $user1 */
         $user1 = $repository->getReference('user');
 
         $this->assertSame(1, $user1->getId());
@@ -96,7 +96,7 @@ class WebTestCaseTest extends WebTestCase
             count($users)
         );
 
-        /** @var \Liip\TestFixturesBundle\Tests\App\Entity\User $user */
+        /** @var \Liip\Acme\Tests\App\Entity\User $user */
         $user = $em->getRepository('LiipTestFixturesBundle:User')
             ->findOneBy([
                 'id' => 1,
@@ -115,11 +115,11 @@ class WebTestCaseTest extends WebTestCase
     public function testAppendFixtures(): void
     {
         $this->loadFixtures([
-            'Liip\TestFixturesBundle\Tests\App\DataFixtures\ORM\LoadUserData',
+            'Liip\Acme\Tests\App\DataFixtures\ORM\LoadUserData',
         ]);
 
         $this->loadFixtures(
-            ['Liip\TestFixturesBundle\Tests\App\DataFixtures\ORM\LoadSecondUserData'],
+            ['Liip\Acme\Tests\App\DataFixtures\ORM\LoadSecondUserData'],
             true
         );
 
@@ -127,7 +127,7 @@ class WebTestCaseTest extends WebTestCase
         $em = $this->getContainer()
             ->get('doctrine.orm.entity_manager');
 
-        /** @var \Liip\TestFixturesBundle\Tests\App\Entity\User $user */
+        /** @var \Liip\Acme\Tests\App\Entity\User $user */
         $user = $em->getRepository('LiipTestFixturesBundle:User')
             ->findOneBy([
                 'id' => 1,
@@ -142,7 +142,7 @@ class WebTestCaseTest extends WebTestCase
             $user->getEnabled()
         );
 
-        /** @var \Liip\TestFixturesBundle\Tests\App\Entity\User $user */
+        /** @var \Liip\Acme\Tests\App\Entity\User $user */
         $user = $em->getRepository('LiipTestFixturesBundle:User')
             ->findOneBy([
                 'id' => 3,
@@ -164,7 +164,7 @@ class WebTestCaseTest extends WebTestCase
     public function testLoadDependentFixtures(): void
     {
         $fixtures = $this->loadFixtures([
-            'Liip\TestFixturesBundle\Tests\App\DataFixtures\ORM\LoadDependentUserData',
+            'Liip\Acme\Tests\App\DataFixtures\ORM\LoadDependentUserData',
         ]);
 
         $this->assertInstanceOf(
@@ -191,7 +191,7 @@ class WebTestCaseTest extends WebTestCase
     public function testLoadDependentFixturesWithDependencyInjected(): void
     {
         $fixtures = $this->loadFixtures([
-            'Liip\TestFixturesBundle\Tests\App\DataFixtures\ORM\LoadDependentUserWithServiceData',
+            'Liip\Acme\Tests\App\DataFixtures\ORM\LoadDependentUserWithServiceData',
         ]);
 
         $this->assertInstanceOf(
@@ -243,7 +243,7 @@ class WebTestCaseTest extends WebTestCase
             count($users)
         );
 
-        /** @var \Liip\TestFixturesBundle\Tests\App\Entity\User $user */
+        /** @var \Liip\Acme\Tests\App\Entity\User $user */
         $user = $em->getRepository('LiipTestFixturesBundle:User')
             ->findOneBy([
                 'id' => 1,
@@ -298,7 +298,7 @@ class WebTestCaseTest extends WebTestCase
         );
 
         $id = 1;
-        /** @var \Liip\TestFixturesBundle\Tests\App\Entity\User $user */
+        /** @var \Liip\Acme\Tests\App\Entity\User $user */
         foreach ($fixtures as $user) {
             $this->assertSame($id++, $user->getId());
         }
@@ -326,7 +326,7 @@ class WebTestCaseTest extends WebTestCase
             $fixtures
         );
 
-        /** @var \Liip\TestFixturesBundle\Tests\App\Entity\User $user1 */
+        /** @var \Liip\Acme\Tests\App\Entity\User $user1 */
         $user1 = $fixtures['id1'];
 
         $this->assertInternalType('string', $user1->getUsername());
@@ -343,7 +343,7 @@ class WebTestCaseTest extends WebTestCase
             count($users)
         );
 
-        /** @var \Liip\TestFixturesBundle\Tests\App\Entity\User $user */
+        /** @var \Liip\Acme\Tests\App\Entity\User $user */
         $user = $em->getRepository('LiipTestFixturesBundle:User')
             ->findOneBy([
                 'id' => 1,
